@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="portfolio-ask-api" content="http://127.0.0.1:8000" />
 <title>S M Afzal Hashmi — Senior AI Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/main.css" />
@@ -11,11 +12,11 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">afzal.dev</div>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#writing">Writing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -23,14 +24,29 @@
 <!-- HERO -->
 <section class="hero" id="about">
   <div class="hero-left">
-    <p class="hero-tag">Senior AI Engineer · Bangalore, India</p>
-    <h1 class="hero-name">S M Afzal<br /><em>Hashmi</em></h1>
-    <p class="hero-desc">
-      I build autonomous AI agents and production-grade LLM systems that cut clinical trial setup from weeks to hours, reduce hiring cycles by 60%, and power enterprise-scale agentic workflows.
-    </p>
-    <div class="hero-actions">
-      <a href="mailto:syedafzal059@gmail.com" class="btn btn-primary">Get in touch</a>
-      <a href="https://github.com/Syedafzal059" class="btn btn-outline" target="_blank">GitHub →</a>
+    <div class="hero-copy">
+      <p class="hero-tag">Senior AI Engineer · Bangalore, India</p>
+      <div class="hero-heading-row">
+        <figure class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            src="assets/images/my_pic.png"
+            alt="S M Afzal Hashmi, Senior AI Engineer"
+            width="560"
+            height="700"
+            decoding="async"
+          />
+        </figure>
+        <h1 class="hero-name">S M Afzal<br /><em>Hashmi</em></h1>
+      </div>
+      <p class="hero-desc">
+        I build autonomous AI agents and production-grade LLM systems that cut clinical trial setup from weeks to hours, reduce hiring cycles by 60%, and power enterprise-scale agentic workflows.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="https://github.com/Syedafzal059" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        <a href="S_M_AFZAL_HASHMI.pdf" class="btn btn-outline" download="S_M_AFZAL_HASHMI.pdf">Download Resume ↓</a>
+      </div>
     </div>
   </div>
   <div class="hero-right">
@@ -50,7 +66,7 @@
       </div>
       <div class="stat-card">
         <div class="num">200<span>+</span></div>
-        <div class="label">Researchers reached</div>
+        <div class="label">Trained 200+ Researchers · 5G / NB-IoT</div>
       </div>
     </div>
     <div class="hero-quote">
@@ -245,11 +261,46 @@
   </div>
 </section>
 
+<hr class="divider" />
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="container">
+    <span class="section-label">Insights</span>
+    <h2 class="section-title">Writing &amp; Ideas</h2>
+
+    <p style="max-width:600px; color:var(--ink2); margin-bottom:2rem;">
+      I write about building production-grade AI systems — focusing on agentic workflows,
+      LLM infrastructure, and real-world failures most teams overlook.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-cat">Original Writing · Medium</div>
+        <div class="project-title">Your LLM Is Not the Problem — Your Harness Is</div>
+        <p class="project-desc">
+          I break down why most LLM systems fail in production — not because of the model,
+          but due to poor orchestration, evaluation, and system design. This piece reflects
+          how I think about building reliable, production-grade AI systems.
+        </p>
+        <div class="project-footer">
+          <span class="tag">LLM Systems</span>
+          <span class="tag">Agentic AI</span>
+          <span class="tag">LLMOps</span>
+          <a href="https://medium.com/@syedafzal059" target="_blank" rel="noopener noreferrer" class="project-link">Read my article ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- RESEARCH -->
 <section id="research">
   <div class="container">
-    <span class="section-label">Research</span>
-    <h2 class="section-title">Published research</h2>
+    <span class="section-label">Published</span>
+    <h2 class="section-title">Research</h2>
     <div class="research-card fade-in">
       <div>
         <p style="font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;">IIT Delhi · Dec 2021 – Dec 2023</p>
@@ -299,7 +350,7 @@
     <div style="margin-top:1.5rem;padding:1.5rem 2rem;background:var(--card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;gap:1.5rem;">
       <div style="font-family:var(--serif);font-size:1.5rem;color:var(--accent);">🏆</div>
       <div>
-        <div style="font-weight:600;font-size:14px;margin-bottom:2px;">2nd Runner Up — Agentic AI Hackathon, Apexon (2025)</div>
+        <div style="font-weight:600;font-size:14px;margin-bottom:2px;">Runner Up — Agentic AI Hackathon, Apexon (2025)</div>
         <div style="font-size:13px;color:var(--ink3);">Also conducted multiple NB-IoT workshops at IIT Delhi reaching researchers nationwide (2023)</div>
       </div>
     </div>
@@ -315,7 +366,13 @@
         <h2 class="section-title" style="margin-bottom:1.5rem;">Let's build<br />something.</h2>
         <p>Open to senior AI engineering roles, LLM consulting, and research collaborations. I'm especially interested in hard infrastructure problems around autonomous AI systems.</p>
         <div class="contact-links">
-          <a href="mailto:syedafzal059@gmail.com" class="contact-link">
+          <a
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=syedafzal059@gmail.com&amp;su=Portfolio%20inquiry"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens Gmail in a new tab to compose a message"
+          >
             <span>Email</span>
             syedafzal059@gmail.com
             <span class="arrow">→</span>
@@ -342,7 +399,14 @@
         <div class="contact-highlight">Senior AI roles · LLM infra · Agentic systems</div>
         <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.75;max-width:340px;">Based in Bangalore. Available for remote-first or hybrid roles. Passionate about building agents that go beyond demos — production systems with real reliability.</p>
         <div style="margin-top:2rem;">
-          <a href="mailto:syedafzal059@gmail.com" class="btn btn-primary" style="font-size:14px;padding:.75rem 2rem;">Send a message →</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=syedafzal059@gmail.com&amp;su=Portfolio%20inquiry"
+            class="btn btn-primary"
+            style="font-size:14px;padding:.75rem 2rem;"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens Gmail in a new tab to compose a message"
+          >Send a message →</a>
         </div>
       </div>
     </div>
@@ -353,6 +417,23 @@
   <p>© 2025 S M Afzal Hashmi · Bangalore, India</p>
   <p>Senior AI Engineer · IIT Delhi MS · 7+ years</p>
 </footer>
+
+<div class="portfolio-chat" id="portfolio-chat-root">
+  <button type="button" class="portfolio-chat__fab" id="portfolio-chat-toggle" aria-expanded="false" aria-controls="portfolio-chat-panel">
+    Ask my AI <span class="portfolio-chat__fab-ico" aria-hidden="true">🤖</span>
+  </button>
+  <div class="portfolio-chat__panel" id="portfolio-chat-panel" hidden>
+    <div class="portfolio-chat__head">
+      <span class="portfolio-chat__title">Ask about my work</span>
+      <button type="button" class="portfolio-chat__close" id="portfolio-chat-close" aria-label="Close chat">×</button>
+    </div>
+    <p class="portfolio-chat__hint">Demo — answers use my public portfolio context only.</p>
+    <div class="portfolio-chat__quick" id="portfolio-chat-quick"></div>
+    <div class="portfolio-chat__messages" id="portfolio-chat-messages"></div>
+    <label class="portfolio-chat__sr-only" for="portfolio-chat-input">Your question</label>
+    <input type="text" class="portfolio-chat__input" id="portfolio-chat-input" placeholder="Ask something…" maxlength="2000" autocomplete="off" />
+  </div>
+</div>
 
 <script src="js/main.js" defer></script>
 </body>
