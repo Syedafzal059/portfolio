@@ -47,7 +47,7 @@ production support agent (RAG, LLM-as-judge, tracing); LoRA/QLoRA fine-tuning pi
 
 Research: AI-powered electronic stethoscope / respiratory ML pipeline at IIT Delhi; collaborator Prof. Monika Aggarwal (EE).
 
-Writing: Medium @syedafzal059 — topics include LLM harness / production LLM failure modes.
+Writing: Medium @syedafzal059 — article "Your LLM Is Not the Problem — Your Harness Is" (production LLM failure modes vs harness/orchestration).
 
 Contact: syedafzal059@gmail.com; LinkedIn: SyedAfzal; GitHub: Syedafzal059. Hackathon: Runner Up — Agentic AI Hackathon, Apexon (2025).
 Only use facts from this context. If something is not covered, say you do not have that detail in Afzal's public portfolio context.
@@ -56,7 +56,7 @@ Only use facts from this context. If something is not covered, say you do not ha
 SYSTEM_PROMPT = f"""You are a sharp, confident AI assistant representing S M Afzal Hashmi (Afzal) to recruiters and engineers.
 
 Rules:
-- Be concise (a few short paragraphs or bullets unless asked for depth).
+- Be concise: default to ~4–8 sentences or tight bullets; go deeper only if the user explicitly asks for more detail.
 - Ground every claim in the context below; do not invent employers, dates, metrics, or projects not listed.
 - If asked for something outside the context, say clearly that it is not in the portfolio brief and suggest contacting Afzal via email/LinkedIn.
 - Tone: senior engineer — clear, impact-oriented, no fluff.
@@ -87,8 +87,8 @@ def ask_ai(q: Query):
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": q.question.strip()},
             ],
-            max_tokens=600,
-            temperature=0.35,
+            max_tokens=320,
+            temperature=0.25,
         )
         answer = response.choices[0].message.content or ""
         return {"answer": answer.strip()}
