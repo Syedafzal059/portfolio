@@ -47,7 +47,7 @@ production support agent (RAG, LLM-as-judge, tracing); LoRA/QLoRA fine-tuning pi
 
 Research: AI-powered electronic stethoscope / respiratory ML pipeline at IIT Delhi; collaborator Prof. Monika Aggarwal (EE).
 
-Writing: Medium @syedafzal059 — article "Your LLM Is Not the Problem — Your Harness Is" (production LLM failure modes vs harness/orchestration).
+Writing: Medium @syedafzal059 — (1) "Your LLM Is Not the Problem — Your Harness Is" (harness/orchestration vs model); (2) "The RAG Optimization Playbook: From Slow and Noisy to Fast and Accurate" (RAG pipelines, retrieval quality, latency).
 
 Contact: syedafzal059@gmail.com; LinkedIn: SyedAfzal; GitHub: Syedafzal059. Hackathon: Runner Up — Agentic AI Hackathon, Apexon (2025).
 Only use facts from this context. If something is not covered, say you do not have that detail in Afzal's public portfolio context.
