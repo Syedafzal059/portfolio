@@ -11,20 +11,25 @@ load_dotenv()
 app = FastAPI(title="Portfolio Ask API", version="0.1.0")
 
 _origins_env = os.getenv("ALLOWED_ORIGINS", "").strip()
-if _origins_env:
-    _allow_origins = [o.strip() for o in _origins_env.split(",") if o.strip()]
-    _cors_credentials = True
+# Explicit list (e.g. production custom domain) plus regex so every *.vercel.app preview
+# still works — a single typo or new Vercel URL used to break CORS and show "Network error" in the browser.
+_cors_kw = {
+    "allow_methods": ["POST", "GET", "OPTIONS"],
+    "allow_headers": ["*"],
+}
+if not _origins_env or _origins_env == "*":
+    _cors_kw["allow_origins"] = ["*"]
+    _cors_kw["allow_credentials"] = False
 else:
-    _allow_origins = ["*"]
-    _cors_credentials = False
+    _cors_kw["allow_origins"] = [o.strip() for o in _origins_env.split(",") if o.strip()]
+    _cors_kw["allow_credentials"] = True
+    _cors_kw["allow_origin_regex"] = (
+        r"^https://[\w.-]+\.vercel\.app$"
+        r"|^http://localhost(:\d+)?$"
+        r"|^http://127\.0\.0\.1(:\d+)?$"
+    )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=_allow_origins,
-    allow_credentials=_cors_credentials,
-    allow_methods=["POST", "GET", "OPTIONS"],
-    allow_headers=["*"],
-)
+app.add_middleware(CORSMiddleware, **_cors_kw)
 
 _api_key = os.getenv("OPENAI_API_KEY")
 _client = OpenAI(api_key=_api_key) if _api_key else None

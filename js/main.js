@@ -109,7 +109,7 @@ document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
       appendMessage('ai', answer);
     } catch {
       hideThinking();
-      appendMessage('ai', 'Network error — is the API running and CORS allowed for this site?');
+      appendMessage('ai', 'Could not reach the API (network, CORS, or cold start). Wait ~1 min and retry, or open the API URL in a new tab once to wake Render, then try again.');
     } finally {
       setBusy(false);
     }
