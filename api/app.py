@@ -49,7 +49,7 @@ Research: AI-powered electronic stethoscope / respiratory ML pipeline at IIT Del
 
 Writing: Medium @syedafzal059 — (1) "Your LLM Is Not the Problem — Your Harness Is" (harness/orchestration vs model); (2) "The RAG Optimization Playbook: From Slow and Noisy to Fast and Accurate" (RAG pipelines, retrieval quality, latency).
 
-Contact: syedafzal059@gmail.com; LinkedIn: SyedAfzal; GitHub: Syedafzal059. Hackathon: Runner Up — Agentic AI Hackathon, Apexon (2025).
+Contact: syedafzal059@gmail.com; LinkedIn: linkedin.com/in/saiyad-mohammad-afzal-hashmi-583955115; GitHub: Syedafzal059. Hackathon: Runner Up — Agentic AI Hackathon, Apexon (2025).
 Only use facts from this context. If something is not covered, say you do not have that detail in Afzal's public portfolio context.
 """
 
